@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <!-- <link rel="stylesheet" href="styles/styles.css"> -->
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/index.js"></script>
+</head>
+
+<body>
+    <!-- <source src="videos/birthday_card.mp4" type="video/mp4"> -->
+    <!-- <img src="https://static.vecteezy.com/system/resources/previews/022/993/668/original/confetti-explosion-for-the-festival-background-golden-party-ribbon-and-confetti-burst-golden-confetti-blast-isolated-on-transparent-background-carnival-element-birthday-celebration-free-png.png" alt="Confetty" class="bckg-img"> -->
+    <% if (locals.content) { %>
+        <!-- <video autoplay loop muted>
+            <source src="videos/vecteezy_seamless-loop-shiny-colorful-bright-confetti-over-black_2278687.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video> -->
+        <div class="content-flex">
+            <div class="page" id="page2">
+                <div class="message">
+                    <!-- <p><%= locals.content.quote %></p> -->
+                    <!-- <img src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Birthday Celebration" /> -->
+
+                    <%= locals.content %>
+                </div>
+                <div class="footer">
+                    <p>Best wishes from Shivansh</p>
+                </div>
+            </div>
+            <form action="/message" method="post" id="form" class="footer page">
+                <button type="submit" name="clear" value="clear" class="button newb" formaction="clear">Clear Message</button>
+                <button type="submit" name="new" value="new" class="button newb">Generate New Message</button>
+            </form>
+        </div>
+        <% } else { %>
+            <!-- <video autoplay loop muted>
+                <source src="videos/vecteezy_seamless-loop-shiny-colorful-bright-confetti-over-black_2278687.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+            <div class="notebook" id="notebook">
+                <div class="page card" id="page1" >
+                    <div class="header">
+                        <h2>Happy Birthday!</h2>
+                    </div>
+                    <div class="content">
+                        <p>Wishing you a day filled with joy, laughter, and sweet memories.</p>
+                        <img src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Birthday Celebration" />
+                    </div>
+                    <div class="footer">
+                        <p>Best wishes from Shivansh</p>
+                    </div>
+                </div>
+
+                <form action="/message" method="post" id="form" class="footer page">
+                    <button onclick="turnPage()" class="button">See Your Special Message</button>
+                </form>
+                <!-- <div class="page" id="page2"> -->
+                <!-- <div class="page" id="page2">
+                    <h1>Page 2</h1>
+                <p>This is the content of page 2.</p> -->
+            </div>
+        <% } %>
+
+
+    </div>
+
+
+    <!-- <div class="card" id="main-card">
+    <div class="header">
+        <h2>Happy Birthday!</h2>
+    </div>
+    <div class="content">
+        <p>Wishing you a day filled with joy, laughter, and sweet memories.</p>
+        <img src="https://images.unsplash.com/photo-1606983340126-99ab4feaa64a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8OXx8fGVufDB8fHx8fA%3D%3D" alt="Birthday Celebration" />
+    </div>
+    <div class="footer">
+        <p>Best wishes from Shivansh</p>
+    </div>
+
+    <form action="/message" method="post">
+        <button type="submit">See Your Special Message</button>
+    </form>
+    </div> -->
+
+</body>
+
+</html>
